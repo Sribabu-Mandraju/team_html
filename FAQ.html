@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            mode: 'jit',
+            theme: {
+                extend: {},
+            },
+            variants: {},
+            plugins: [],
+        }
+    </script>
+</head>
+<body class="bg-blue-100">
+    <h1 class="text-center font-bold text-[30px] m-[20px]">Frequently Asked Questions</h1>
+    <div class="flex flex-col p-4 gap-2 w-[100vw] w-max-[700px] m-auto">
+        <div class="flex flex-row bg-blue-200 rounded-md relative w-full font-semibold">
+            <div class="p-4 ">
+                <span>01</span>
+            </div>
+            <div class="p-4  mr-8 ">
+               <p>Does this travel agency offer custom travel packages?</p>
+               <span class="hidden font-mono font-light  mt-2 p-3 bg-blue-300 rounded-md" id="span1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil doloremque quae repellendus minus consectetur fugit placeat, explicabo ipsam vel reprehenderit id error ab, laboriosam quos tenetur. Et corrupti facere eos culpa, omnis sequi, pariatur non sunt tenetur labore iste porro aliquam error similique velit. Voluptatem nemo architecto nesciunt esse error.</span>
+            </div>
+            <div class="absolute right-0  p-2 pr-4 ">
+                <input type="button" value="+" id="btn1" class="text-[25px] w-[40px] pb-1 rounded-md h-[40px] hover:bg-blue-300">
+            </div>
+        </div>
+        <div class="flex flex-row bg-blue-200 rounded-md relative w-full font-semibold">
+            <div class="p-4">
+                <span>02</span>
+            </div>
+            <div class="p-4 mr-8">
+               <p>Does this travel agency provide travel insurance?</p>
+               <span class="hidden font-mono font-light mt-2 p-3 bg-blue-300 rounded-md" id="span2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil doloremque quae repellendus minus consectetur fugit placeat, explicabo ipsam vel reprehenderit id error ab, laboriosam quos tenetur. Et corrupti facere eos culpa, omnis sequi, pariatur non sunt tenetur labore iste porro aliquam error similique velit. Voluptatem nemo architecto nesciunt esse error.</span>
+            </div>
+            <div class="p-2 pr-4 absolute right-0">
+                <input type="button" value="+" id="btn2" class="text-[25px] w-[40px] pb-1 rounded-md h-[40px] hover:bg-blue-300">
+            </div>
+        </div>
+        <div class="flex flex-row bg-blue-200 rounded-md relative w-full font-semibold ">
+            <div class="p-4">
+                <span>03</span>
+            </div>
+            <div class="p-4 mr-8">
+               <p >How can I contact this travel agency's customer service if I have questions or problems?</p>
+               <span class="hidden font-mono font-light mt-2 p-3 bg-blue-300 rounded-md" id="span3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil doloremque quae repellendus minus consectetur fugit placeat, explicabo ipsam vel reprehenderit id error ab, laboriosam quos tenetur. Et corrupti facere eos culpa, omnis sequi, pariatur non sunt tenetur labore iste porro aliquam error similique velit. Voluptatem nemo architecto nesciunt esse error.</span>
+            </div>
+            <div class="p-2 pr-4 absolute right-0">
+                <input type="button" value="+" id="btn3" class="text-[25px] w-[40px] pb-1 rounded-md h-[40px] hover:bg-blue-300">
+            </div>
+        </div>
+        <div class="flex flex-row bg-blue-200 rounded-md relative w-full font-semibold">
+            <div class="p-4">
+                <span>04</span>
+            </div>
+            <div class="p-4 mr-8">
+               <p>Does this travel agency have a cancellation and refund policy?</p>
+               <span class="hidden font-mono font-light mt-2 p-3 bg-blue-300 rounded-md" id="span4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil doloremque quae repellendus minus consectetur fugit placeat, explicabo ipsam vel reprehenderit id error ab, laboriosam quos tenetur. Et corrupti facere eos culpa, omnis sequi, pariatur non sunt tenetur labore iste porro aliquam error similique velit. Voluptatem nemo architecto nesciunt esse error.</span>
+            </div>
+            <div class="p-2 pr-4 absolute right-0">
+                <input type="button" value="+" id="btn4" class="text-[25px] w-[40px] pb-1 rounded-md h-[40px] hover:bg-blue-300">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('btn1').addEventListener('click',function(){
+                const value=document.getElementById('btn1').getAttribute("value")==="+"?"-":"+";
+                document.getElementById('btn1').setAttribute("value",value);
+                document.getElementById('span1').classList.toggle('hidden');
+                document.getElementById('span1').classList.toggle('block');
+               
+               
+
+        });
+        document.getElementById('btn2').addEventListener('click',function(){
+                const value=document.getElementById('btn2').getAttribute("value")==="+"?"-":"+";
+                document.getElementById('btn2').setAttribute("value",value);
+                document.getElementById('span2').classList.toggle('hidden');
+                document.getElementById('span2').classList.toggle('block');
+        });
+        document.getElementById('btn3').addEventListener('click',function(){
+                const value=document.getElementById('btn3').getAttribute("value")==="+"?"-":"+";
+                document.getElementById('btn3').setAttribute("value",value);
+                document.getElementById('span3').classList.toggle('hidden');
+                document.getElementById('span3').classList.toggle('block');
+        });
+        document.getElementById('btn4').addEventListener('click',function(){
+                const value=document.getElementById('btn4').getAttribute("value")==="+"?"-":"+";
+                document.getElementById('btn4').setAttribute("value",value);
+                document.getElementById('span4').classList.toggle('hidden');
+                document.getElementById('span4').classList.toggle('block');
+        });
+        
+    </script>
+</body>
+</html>
