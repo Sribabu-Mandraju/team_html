@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            mode: 'jit',
+            theme: {
+                extend: {},
+            },
+            variants: {},
+            plugins: [],
+        }
+    </script>
+    <style>
+        .snow{
+           animation-name:motion;
+           animation-duration:1.5s;
+           animation-timing-function:ease-out;
+           animation-delay:0s;
+           animation-iteration-count:infinite;
+           animation-fill-mode:none;
+        }
+        @keyframes motion{
+            from{
+             transform:translateY(-190px);
+
+            }
+            to{
+              transform:translateY(400px);/*go back to original position*/
+            }
+        }
+        .fall{
+           transform:translateY(-900px);
+           animation-name:motion2;
+           animation-duration:1.7s;
+           animation-timing-function:ease-in;
+           animation-delay:0s;
+           animation-iteration-count:infinite;
+           animation-fill-mode:none;
+           
+        }
+        @keyframes motion2{
+            from{
+             transform:translateY(-190px);
+
+            }
+            to{
+              transform:translateY(550px);/*go back to original position*/
+            }
+        }
+        .link span{
+            transition:0.5s;
+        }
+       
+        .link:hover span,
+        .active span{
+           background-image: url('gopen.png');
+           
+        }
+    </style>
+</head>
+<body class=" w-screen h-screen bg-black ">
+    <div class="snowfall  relative w-100% ">
+        <img class="snow absolute top-[30vh] left-[6vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="snow absolute top-[80vh] left-[50vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="snow absolute top-[10vh] left-[96vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="snow absolute top-[50vh] left-[16vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="snow absolute top-[30vh] left-[72vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="snow absolute top-[20vh] left-[26vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="snow absolute top-[80vh] left-[66vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="snow absolute top-[99vh] left-[56vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="snow absolute top-[30vh] left-[19vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="fall absolute top-[48vh] left-[36vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="fall absolute top-[30vh] left-[56vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="fall absolute top-[10vh] left-[20vw]" width="10px" height="10px" src="snowball.jpg">
+        <img class="fall absolute top-[30vh] left-[46vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="fall absolute top-[60vh] left-[26vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="fall absolute top-[19vh] left-[9vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="fall absolute top-[9vh] left-[89vw]" width="6px" height="6px" src="snowball.jpg">
+        <img class="fall absolute top-[70vh] left-[17vw]" width="6px" height="6px" src="snowball.jpg">
+    </div>
+    <header class="flex  items-center justify-between  top-0 left-0 p-[2vw]   w-full ">
+       <h2 class=" text-green-600 text-[2vw]"><i class="bi bi-tree-fill "></i></h2>
+       <nav>
+          <a href="#" class="link active relative m-[1vw]  font-bold p-[1vw] py-[2vw] text-[0.8vw] text-white">Home<span class="absolute top-0 left-0 w-[5vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
+          <a href="#" class="link  relative m-[1vw] font-bold p-[1vw] py-[2vw] text-[0.8vw]  text-white">About<span class="absolute top-0 left-0 w-[5vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
+          <a href="#" class="link relative m-[1vw]  font-bold text-[0.8vw] p-[1vw] py-[2vw] text-white">Service<span class="absolute top-0 left-0 w-[5vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
+          <a href="#" class="link relative m-[1vw]  font-bold text-[0.8vw] p-[1vw] py-[2vw] text-white">Contact<span class="absolute top-0 left-0 w-[5vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
+          <a href="#" class="link relative m-[1vw] font-bold text-[0.8vw] p-[1vw] py-[2vw] text-white">Info<span class="absolute top-0 left-0 w-[5vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
+       </nav>
+    </header>
+    <div class=" h-full  relative ">
+        <img id="santa" class="fixed bottom-[10vh] w-[30vw]"  src="santa-removebg-preview.png">
+    </div>
+    <section class=" relative text-white h-full ">
+        <div class=" flex h-full w-1/2 absolute text-white"><p id="text" class=" relative text-[40px] font-bold">Marry Christmas</p></div>
+        <img id="santaflip" src="santa_flip.png" class="absolute top-0 right-0 m-[40px]">
+    </section>
+    <script>
+        let santa=document.getElementById('santa');
+        let santaflip=document.getElementById('santaflip');
+        let text=document.getElementById('text');
+        window.addEventListener('scroll',function(){
+            let value=window.scrollY;
+            santa.style.left=value*5.5+'px';
+            santa.style.bottom=value*2.5+'px'
+            santaflip.style.right=value*0.45+'px';
+            santaflip.style.top=value*0.45+'px';
+            text.style.top=value*0.5+'px';
+            text.style.left=value*0.2+'px';
+        });
+    </script>
+    
+</body>
+</html>
