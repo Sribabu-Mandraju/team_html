@@ -61,7 +61,9 @@
         .link:hover span,
         .active span{
            background-image: url('gopen.png');
-           
+        }
+        .mrychr{
+            transform: rotate(-20deg);
         }
     </style>
 </head>
@@ -85,35 +87,72 @@
         <img class="fall absolute top-[9vh] left-[89vw]" width="6px" height="6px" src="snowball.jpg">
         <img class="fall absolute top-[70vh] left-[17vw]" width="6px" height="6px" src="snowball.jpg">
     </div>
-    <header class="flex  items-center justify-between  top-0 left-0 p-[2vw]   w-full ">
+    <header class="flex  items-center justify-between  top-0 left-0 p-[4vw]   w-full ">
        <h2 class=" text-green-600 text-[2vw]"><i class="bi bi-tree-fill "></i></h2>
        <nav>
-          <a href="#" class="link active relative m-[1vw]  font-bold p-[1vw] py-[2vw] text-[0.8vw] text-white">Home<span class="absolute top-0 left-0 w-[5vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
-          <a href="#" class="link  relative m-[1vw] font-bold p-[1vw] py-[2vw] text-[0.8vw]  text-white">About<span class="absolute top-0 left-0 w-[5vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
-          <a href="#" class="link relative m-[1vw]  font-bold text-[0.8vw] p-[1vw] py-[2vw] text-white">Service<span class="absolute top-0 left-0 w-[5vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
-          <a href="#" class="link relative m-[1vw]  font-bold text-[0.8vw] p-[1vw] py-[2vw] text-white">Contact<span class="absolute top-0 left-0 w-[5vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
-          <a href="#" class="link relative m-[1vw] font-bold text-[0.8vw] p-[1vw] py-[2vw] text-white">Info<span class="absolute top-0 left-0 w-[5vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
+          <a href="#" class="link active relative m-[1vw]  font-bold p-[1vw] py-[2vw] text-[0.8vw] text-white">Home<span class="absolute top-0 left-0 w-[6vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
+          <a href="#" class="link  relative m-[1vw] font-bold p-[1vw] py-[2vw] text-[0.8vw]  text-white">About<span class="absolute top-0 left-0 w-[6vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
+          <a href="#" class="link relative m-[1vw]  font-bold text-[0.8vw] p-[1vw] py-[2vw] text-white">Service<span class="absolute top-0 left-0 w-[6vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
+          <a href="#" class="link relative m-[1vw]  font-bold text-[0.8vw] p-[1vw] py-[2vw] text-white">Contact<span class="absolute top-0 left-0 w-[6vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
+          <a href="#" class="link relative m-[1vw] font-bold text-[0.8vw] p-[1vw] py-[2vw] text-white">Info<span class="absolute top-0 left-0 w-[6vw] h-[5vw] bg-[url('gclose.png')] bg-cover "></span></a>
        </nav>
     </header>
     <div class=" h-full  relative ">
-        <img id="santa" class="fixed bottom-[10vh] w-[30vw]"  src="santa-removebg-preview.png">
+        <div id="santa" class=" fixed bottom-[10vh] w-fit h-fit">
+           <img  class=" w-[30vw] p-4 py-8"  src="santa-removebg-preview.png">
+           <span id="mrychr"  class="text-white absolute left-[70px] bottom-[160px]"><img id="imgsanta" src="merry.png"></span>
+        </div>
     </div>
-    <section class=" relative text-white h-full ">
-        <div class=" flex h-full w-1/2 absolute text-white"><p id="text" class=" relative text-[40px] font-bold">Marry Christmas</p></div>
-        <img id="santaflip" src="santa_flip.png" class="absolute top-0 right-0 m-[40px]">
+    <section class=" relative text-white w-100% h-full overflow-hiddden">
+        <img src="snowheap-removebg-preview.png" class="w-full absolute bottom-0 h-[400px]">
+        <div id="santaflip" class="absolute top-0 right-0 w-fit h-fit">
+           <img  src="santa_flip.png" >
+           <span id="mrychr2"  class="text-white absolute left-[90px] bottom-[100px] w-[20px] h-[10px]"><img id="imgsanta" src="merry.png"></span>
+        </div>
+        <div id="tree" class=" absolute h-full  top-1">
+            <img src="tree.png" class="h-full ">
+            
+        </div>
+        
     </section>
     <script>
         let santa=document.getElementById('santa');
         let santaflip=document.getElementById('santaflip');
-        let text=document.getElementById('text');
+        let imgsanta=document.getElementById('mrychr');
+        let text=document.getElementById('mrychr2');
+        let tree=document.getElementById('tree');
         window.addEventListener('scroll',function(){
             let value=window.scrollY;
-            santa.style.left=value*5.5+'px';
-            santa.style.bottom=value*2.5+'px'
-            santaflip.style.right=value*0.45+'px';
-            santaflip.style.top=value*0.45+'px';
-            text.style.top=value*0.5+'px';
-            text.style.left=value*0.2+'px';
+            let initial=200;
+            let hinit=200;
+            santa.style.left=value*2.5+'px';
+            santa.style.bottom=value*1+'px';
+            imgsanta.style.width=(initial-value/2)+'px';
+            imgsanta.style.height=(hinit-value/5)+'px';
+            imgsanta.style.bottom=(initial-value/3)+'px';
+            // console.log(value);
+            console.log(window.getComputedStyle(tree).right);
+            santaflip.classList.add('hidden');
+            tree.classList.add('hidden');
+            if(value>450){
+               let sw=10;
+               let sh=20;
+               let lf=750;
+               santaflip.classList.remove('hidden');
+               tree.classList.remove('hidden');
+               santaflip.style.right=value*0.4+'px';
+               santaflip.style.top=value*0.3+'px';
+               text.style.width=(sw+value/9)*3+'px';
+               text.style.height=(sh+value/7)*2.5+'px';
+               tree.style.left=(value-lf)*0.95+'px';
+               
+            }
+            if(value>900){
+                
+                santaflip.style.top=450+'px';
+                santaflip.style.right=200+'px';
+                
+            }
         });
     </script>
     
