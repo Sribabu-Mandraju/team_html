@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekart_grid</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            mode: 'jit',
+            theme: {
+                extend: {},
+            },
+            variants: {},
+            plugins: [],
+        }
+    </script>
+    <style>
+        .box{
+            visibility:hidden;
+            transition-delay:0.1s;
+        }
+        .diag:hover .box{
+            visibility:visible;
+        }
+        .diag:hover img{
+            transform: scale(1.2);
+           
+        }
+    </style>
+</head>
+<body class="w-screen h-screen">
+    <div class="flex flex-col justify-center items-center gap-2 w-full h-fit p-12">
+        <div class="text-[12px] text-gray-600">WHAT WE DO</div>
+        <div class="flex  text-[40px] font-bold  w-full flex-col justify-center items-center text-center sm:inline-block"><span>Innovation </span><span>tailored for you</span> </div>
+        <div class="flex flex-row gap-4">
+            <div class="text-[14px] text-gray-600 font-semibold hover:text-black"><a href="#">Home</a></div>
+            <div class="text-[14px] text-gray-600 font-semibold hover:text-black"><a href="#">Team</a></div>
+        </div>
+    </div>
+    <div class="grid grid-rows-4 grid-cols-2 gap-4 w-full h-[1070px] overflow-hidden sm:h-[630px] sm:grid-cols-4 sm:grid-rows-2">
+        <div class="diag relative rounded-[15px] col-span-2 row-span-2 w-full h-full overflow-hidden">
+            <img class=" w-full h-full rounded-[15px]" src="https://plus.unsplash.com/premium_photo-1664475951647-bfa3ab77d131?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGZhc2hpb24lMjBtb2RlbCUyMHdpdGglMjBwbGFpbiUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D">
+            <div class="box absolute top-0 flex flex-col items-center justify-center w-full h-full rounded-[15px] bg-white bg-opacity-40 font-bold text-[20px]" ><p class="text-[17px]">small text</p><p class="text-[30px]">Big text</p>
+            </div>
+        </div>
+        <div class="diag relative rounded-[15px] col-span-1 row-span-1 w-full h-full overflow-hidden">
+            <img class="w-full h-full rounded-[15px]" src="clothin.jpeg">
+            <div class="box absolute top-0 flex flex-col items-center justify-center w-full h-full rounded-[15px] bg-white bg-opacity-40 font-bold text-[20px]"><p class="text-[17px]">small text</p><p class="text-[30px]">Big text</p>
+            </div>
+        </div>
+        <div class="diag relative rounded-[15px] col-span-1 row-span-1 w-full h-full overflow-hidden">
+            <img class="w-full h-full" src="clothing3.jpeg">
+            <div class="box absolute top-0 flex flex-col items-center justify-center  w-full h-full rounded-[15px] bg-white bg-opacity-40 font-bold text-[20px]"><p class="text-[17px]">small text</p><p class="text-[30px]">Big text</p>
+            </div>
+        </div>
+        <div class="diag relative rounded-[15px] col-span-1 row-span-1 w-full h-full overflow-hidden">
+            <img class="w-full h-full" src="clothing1.jpeg">
+            <div class="box absolute top-0 flex flex-col items-center justify-center  w-full h-full rounded-[15px] bg-white bg-opacity-40 font-bold text-[20px]"><p class="text-[17px]">small text</p><p class="text-[30px]">Big text</p>
+            </div>
+        </div>
+        <div class="diag relative rounded-[15px] col-span-1 row-span-1 w-full h-full overflow-hidden">
+            <img class="w-full h-full" src="clothing2.jpeg">
+            <div class="box absolute top-0 flex flex-col items-center justify-center  w-full h-full rounded-[15px] bg-white bg-opacity-40 font-bold text-[20px]"><p class="text-[17px]">small text</p><p class="text-[30px]">Big text</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>
