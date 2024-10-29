@@ -19,14 +19,16 @@
     </script>
     <style>
         .image-grid{
-            display:grid;
-            grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
-            grid-template-rows: repeat(auto-fill,minmax(150px,1fr));
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:flex-start;
             gap:10px;
+            padding:10px;
         }
         .image-grid img{
-            width:100%;
+            width:auto;
             height:auto;
+            display:block;
             border-radius: 8px;
         }
     </style>
@@ -46,6 +48,7 @@
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_RiWv03YLy4fYlkAW3RVMfFY8NabQ3jTelw&s',
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2bjtLFTK7UpeOBeqnjhejRSdRRn5lOpuFvQ&s',
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH9QY1RpMRKqy5x5vHCrk37PJQ71z4Ojgv4Q&s',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPWd8hWR2_D2VAiVXVcEtBk1HowF5gHXPwQ&s',
 
 
         ]
