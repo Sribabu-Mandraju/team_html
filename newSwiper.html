@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiper.js Example</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    /* Custom Swiper Styles */
+    .swiper {
+      width: 100%;
+      height: 100vh;
+    }
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #fff;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+    }
+    .swiper-pagination-bullet {
+      background: #fff;
+      opacity: 0.8;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+    }
+    /* Custom Styling for a dark overlay on text */
+    .swiper-slide-overlay {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide" style="background-image: url('https://picsum.photos/1200/800?image=1050');">
+            <div class="swiper-slide-overlay">Slide 1</div>
+          </div>
+          <div class="swiper-slide" style="background-image: url('https://picsum.photos/1200/800?image=1048');">
+            <div class="swiper-slide-overlay">Slide 2</div>
+          </div>
+          <div class="swiper-slide" style="background-image: url('https://picsum.photos/1200/800?image=1045');">
+            <div class="swiper-slide-overlay">Slide 3</div>
+          </div>
+        </div>
+        <!-- Add Pagination and Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+      <script>
+        const swiper = new Swiper('.swiper', {
+          // Optional parameters
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          // Pagination and Navigation
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          // Add fade effect
+          effect: 'fade',
+          fadeEffect: {
+            crossFade: true
+          },
+        });
+      </script>
+</body>
+    </html>
