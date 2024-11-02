@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            mode: 'jit',
+            theme: {
+                extend: {},
+            },
+            variants: {},
+            plugins: [],
+        }
+    </script>
+    <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+    
+        body {
+          background-image:url('https://www.psd-dude.com/tutorials/resources-images/presentation-background/simple-presentation-background.jpg');
+          background-repeat:no-repeat;
+          background-size: cover;          
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+    
+        .swiper {
+          width: 100%;
+          padding-top: 25vh;
+          padding-bottom: 50px;
+        }
+    
+        .swiper-slide {
+          background-position: center;
+          background-size: cover;
+          width: 300px;
+          height: 300px;
+        }
+    
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          border-radius: 2px 50px 2px 50px;
+          border:3px solid white;
+          
+          
+        }
+        
+        .swiper-slide img:hover{
+            /* transform:scale(1.05);
+            transition-delay: 0.2s; */
+            animation-name:motion2;
+           animation-duration:0.5s;
+           animation-timing-function:ease-in;
+           animation-delay:0s;
+           animation-iteration-count:1;
+           animation-fill-mode:none;
+           transform:scale(1.05);
+        }
+        @keyframes motion2{
+            from{
+             transform:scale(1);
+
+            }
+            to{
+              transform:scale(1.05);/*go back to original position*/
+            }
+        }
+      </style>
+</head>
+<body class="w-screen h-screen ">
+    <div class="swiper mySwiper">
+        <div class=" absolute top-0 left-0  w-[150px] h-fit"><img src="filmymojilogo.png"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSToQlDco1OqfbnA3oHsE07W0lYPNeI_PBp6g&s" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMitaaPvpyW-EFAoxBve0qioc2vGeWvh0QA-zOPCtSBfpYfSnVImdMZAfAAD3DqUymWy8&usqp=CAU" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy_t9btMEBQ89rFYflxrHUHR6ckYMQ4xmCn14X2G_86llXxVOdOELp_KuMQql54x8s__A&usqp=CAU" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHgQZxDjm9ZM5jgmpaDiHbEkHQxdgiHtmFlEbB7EtOZW6ZlyV5VrJ-nCR7FsP9teMQVio&usqp=CAU" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSocAUPqpdiQQYcXNwCYt1YoNR_ySvw-NDZL78TM9J7xtkt80ckX-OV9k2dwjzuo1ZTyoc&usqp=CAU" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://pbs.twimg.com/media/FWARF1FaAAITwwO.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzPw7GjKD0e9YOQ-heXuuoS4-06q1w8oVMsQCH3oxfC9RS-uhnZr4FtNdLH8drLjNlMM0&usqp=CAU" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFST3TrYVDX9ZabzQfphg5Xju00_AnKVYqBx9N199Fleq7PbMUztze1H0QguBIP6k9Smw&usqp=CAU" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxjdd8jChrlxo6YrvSn-n9DGIkkQD4pugieckWhUjkfNrNfR4uQV37pKIT5M5Ryg5kwtM&usqp=CAU" />
+          </div>
+        </div>
+        <div class="swiper-pagination "></div>
+      </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
+</body>
+</html>
