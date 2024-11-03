@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            mode: 'jit',
+            theme: {
+                extend: {},
+            },
+            variants: {},
+            plugins: [],
+        }
+    </script>
+</head>
+<body class="bg-gray-50 flex justify-center items-center min-h-screen">
+
+    <div class="relative group"> <!-- Group for hover control -->
+        <div class="flex flex-row gap-2 p-2 rounded-lg cursor-pointer hover:bg-gray-200 items-center">
+            Blog
+            <div class="down w-fit"><i class="arrow bi bi-chevron-down"></i></div>
+        </div>
+        <div class="coint flex border hidden group-hover:flex rounded-lg border-gray-200 bg-white flex-col absolute w-max p-2 z-10">
+            <div class="flex flex-col gap-1">
+                <div class="item cursor-pointer hover:bg-gray-200 p-2 rounded">Blog</div>
+                <div class="item cursor-pointer hover:bg-gray-200 p-2 rounded">Blog Grid</div>
+                <div class="item cursor-pointer hover:bg-gray-200 p-2 rounded">Blog Details</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+    
