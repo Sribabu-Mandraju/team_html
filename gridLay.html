@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike Shoe Grid</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="font-inter p-4">
+
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 auto-rows-[200px]" id="grid">
+  <!-- Grid items will be dynamically inserted here by JavaScript -->
+</div>
+
+<script>
+    const images = [
+    'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/cd224939-07d3-4fae-b278-f4b4c6a39e26/air-max-90-g-golf-shoe-LS9j9Q.png',
+    'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/0e6b0bc8-73a2-4d99-b65b-8a0f3a9a4b65/air-force-1-07-shoe-8BXbh2.png',
+    'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/b5fdf2e4-54e7-4b42-946e-622a5d9dc1df/dunk-high-retro-shoe-8z24fB.png',
+    'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/e5dfc8ea-dbd2-4a91-ae4f-8fb48cce8fcd/air-zoom-superrep-3-hiit-class-shoes-fFbFjW.png',
+    'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/4fd16c50-1f51-4024-8789-5b973d6fe3cb/blazer-mid-77-vintage-shoe-Wh8R87.png',
+    'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/4c1f4b23-c593-4a0e-8e06-1b646a9b7b6e/air-zoom-infinity-tour-next-golf-shoe-Kj0tZM.png',
+    'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/f1b4cf19-d3e7-4ab4-9d54-3d6715e65b98/air-zoom-pegasus-40-road-running-shoes-54dtRq.png',
+    'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/c521cc32-c1dd-4e08-877b-7a38e20b4a9e/jordan-stay-loyal-2-basketball-shoes-bvZx3J.png',
+    'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/94d72dbb-6aa5-4058-bf60-bd9ffb7b5f0f/air-zoom-vaporfly-next-2-road-racing-shoes-S0qL5f.png',
+    'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/a4bf74e0-0e83-485f-98c9-16dc57a1b4e5/air-zoom-structure-24-road-running-shoes-8RLSFB.png',
+    'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1cb84202-0d08-40cf-b8f2-f9db67bbf8c5/air-max-sc-shoe-55jtcR.png',
+    'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/779cd9b2-3e84-4729-a2d4-1360e50e9fcb/jordan-delta-3-low-shoes-vcwY3b.png'
+  ];
+  
+  const shoedata = [
+    { title: "Nike Air Max 1 Premium", cost: "₹ 14, 995.00" },
+    { title: "Nike Air Max Plus 3", cost: "₹ 17, 495.00" },
+    { title: "Luka 2 PF", cost: "₹ 11, 895.00" },
+    { title: "Nike Air Max Dn", cost: "₹ 13, 995.00" },
+    { title: "Nike Air Max 1 Premium", cost: "₹ 14, 995.00" },
+    { title: "Nike Air Max Plus 3", cost: "₹ 17, 495.00" },
+    { title: "Luka 2 PF", cost: "₹ 11, 895.00" },
+    { title: "Nike Air Max Dn", cost: "₹ 13, 995.00" },
+    { title: "Nike Air Max 1 Premium", cost: "₹ 14, 995.00" },
+    { title: "Nike Air Max Plus 3", cost: "₹ 17, 495.00" },
+    { title: "Luka 2 PF", cost: "₹ 11, 895.00" },
+    { title: "Nike Air Max Dn", cost: "₹ 13, 995.00" }
+  ];
+
+  const grid = document.getElementById('grid');
+
+  // Helper function to get random row and column spans
+  const getRandomSpan = () => {
+    const spans = [1, 2, 3]; // Adjust row/column span options as needed
+    return spans[Math.floor(Math.random() * spans.length)];
+  };
+
+  shoedata.forEach((item, i) => {
+    // Create grid item container
+    const gridItem = document.createElement('div');
+    const rowSpan = getRandomSpan();
+    const colSpan = getRandomSpan();
+
+    // Add classes for dynamic row and column spans
+    gridItem.className = `relative rounded-xl bg-red-600 overflow-hidden p-4 group col-span-${colSpan} row-span-${rowSpan}`;
+
+    // Insert image
+    const img = document.createElement('img');
+    img.src = images[i % images.length];
+    img.alt = `nike${i + 1}`;
+    img.className = 'absolute inset-0 border bg-red-600 object-cover w-full h-full rounded-xl transition-transform duration-300';
+
+    // Hover effect text container
+    const hoverDiv = document.createElement('div');
+    hoverDiv.className = 'absolute inset-0 flex flex-col items-center justify-center rounded-xl bg-black/70 text-white opacity-0 transition-opacity duration-500 hover-text';
+
+    // Title
+    const title = document.createElement('h1');
+    title.className = 'text-xl font-semibold text-center';
+    title.innerText = item.title;
+
+    // Button with price and icon
+    const button = document.createElement('button');
+    button.className = 'bg-black px-[16px] py-[8px] rounded-full flex justify-center items-center gap-[8px] border border-white mt-[8px]';
+    button.innerHTML = `<i class="fas fa-shopping-bag"></i> ${item.cost}`;
+
+    // Append elements to their respective containers
+    hoverDiv.appendChild(title);
+    hoverDiv.appendChild(button);
+    gridItem.appendChild(img);
+    gridItem.appendChild(hoverDiv);
+    grid.appendChild(gridItem);
+
+    // Add hover effect with JavaScript
+    gridItem.addEventListener('mouseenter', () => {
+      hoverDiv.style.opacity = '1';
+      img.style.opacity = '0.7';
+      img.style.transform = 'scale(1.1)';
+    });
+
+    gridItem.addEventListener('mouseleave', () => {
+      hoverDiv.style.opacity = '0';
+      img.style.opacity = '1';
+      img.style.transform = 'scale(1.0)';
+    });
+  });
+</script>
+
+</body>
+</html>

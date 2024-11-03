@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Level Dropdown Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+
+  <!-- Main Menu -->
+  <div class="relative">
+    <button class="px-4 py-2 bg-gray-800 rounded-lg hover:bg-gray-700">
+      Menu
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div class="absolute left-0 mt-2 bg-white text-gray-800 rounded-lg shadow-lg w-40">
+      <div class="relative group">
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">About Us</a>
+      </div>
+      <div class="relative group">
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Pricing</a>
+      </div>
+      
+      <!-- Dropdown with Submenu -->
+      <div class="relative group">
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex justify-between">
+          Blog
+          <span>▸</span>
+        </a>
+        
+        <!-- Submenu -->
+        <div class="absolute left-full top-0 ml-2 hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg w-40">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Our Blog</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog Grid</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex justify-between">
+            Blog Details
+            <span>▸</span>
+          </a>
+          
+          <!-- Nested Submenu for Blog Details -->
+          <div class="absolute left-full top-0 ml-2 hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg w-40">
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Sub Blog 1</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Sub Blog 2</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Additional Main Menu Items -->
+      <div class="relative group">
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 flex justify-between">
+          Service
+          <span>▸</span>
+        </a>
+        
+        <!-- Submenu for Service -->
+        <div class="absolute left-full top-0 ml-2 hidden group-hover:block bg-white text-gray-800 rounded-lg shadow-lg w-40">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Web Design</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">App Development</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Marketing</a>
+        </div>
+      </div>
+      
+      <div class="relative group">
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a>
+      </div>
+      <div class="relative group">
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Portfolio</a>
+      </div>
+      <div class="relative group">
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Utility</a>
+      </div>
+      <div class="relative group">
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Account</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
