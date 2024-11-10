@@ -67,7 +67,7 @@
                 transform:scale(0.8);
             } 
         }
-        /* .coint{
+        .coint{
            animation-name:moveup;
            animation-duration:0.6s;
            animation-timing-function:ease-out;
@@ -84,7 +84,7 @@
             100%{
                 transform:translateY(-10px);
             } 
-        } */
+        }
     </style>
 </head>
 <body class="w-screen h-screen">
@@ -115,22 +115,19 @@
                 <div class=" font-bold text-[20px]">BrandName</div>
                 <div class=" flex gap-4 flex-row hidden sm:flex">
                     <div class="p-2  rounded-[15px] hover:bg-gray-200">Home</div>
-                    <div class=" motion " onmouseover="itemfn(this,0)" onmouseout="item(this,0)">
-                        <div class="border border-black">
-                        <div class="flex  flex-row gap-2 p-2 rounded-[15px] cursor-pointer hover:bg-gray-200" >Shop<div class="down  w-fit"><i class="arrow bi bi-chevron-down"></i></div>
+                    <div class=" motion relative rounded-[15px] ">
+                        <div class="flex  flex-row gap-2 p-2 rounded-[15px] cursor-pointer hover:bg-gray-200" onmouseover="itemfn(this,0)" >Shop<div class="down  w-fit"><i class="arrow bi bi-chevron-down"></i></div>
                         </div>
-                        <div class="coint relative border border-black  mt-8 ">
-                            <div class="box border-t border-l border-gray-200 absolute w-[20px] h-[20px] left-[10px]  bg-gray-100 z-[-10]"></div>
-                            <div class=" flex border  rounded-[10px] border-gray-200 bg-gray-100 flex-col absolute   w-max p-2 pb-0 z-[0] ">  
-                                 <div class="flex flex-col gap-1  top-[-18px]">
-                                     <div class="item cursor-pointer">Men's ware</div><hr class="h-[2px] ">
-                                     <div class="item cursor-pointer">Womens's ware</div><hr class="h-[2px] ">
-                                     <div class="item cursor-pointer">Kids's ware</div><hr class="h-[2px] ">
-                                     <div class="item cursor-pointer">Sport's ware</div><hr class="h-[2px] ">
-                                  </div>
-                           </div>
+                        <div class="coint flex border hidden rounded-[10px] border-gray-200 bg-gray-100 flex-col   absolute w-max p-2 pb-0 z-[0] top-[80px]" onmouseover="ntg(this)" onmouseout="item(this,0)">  
+                            <div class="box border-t border-l border-gray-200 relative w-[20px] h-[20px] left-[10px] top-[-20px] bg-gray-100 z-[-10]"></div>
+                            <div class="flex flex-col gap-1 relative top-[-18px]">
+                            <div class="item cursor-pointer">Men's ware</div><hr class="h-[2px] ">
+                            <div class="item cursor-pointer">Womens's ware</div><hr class="h-[2px] ">
+                            <div class="item cursor-pointer">Kids's ware</div><hr class="h-[2px] ">
+                            <div class="item cursor-pointer">Sport's ware</div><hr class="h-[2px] ">
+                            </div>
                         </div>
-                    </div>
+                        
                     </div>
                     <div class="p-2 hover:bg-gray-400 rounded-[15px]">About</div>
                     <div class=" motion relative  ">
@@ -234,18 +231,28 @@
             document.getElementsByClassName('list')[0].classList.toggle('block');
             document.getElementsByClassName('list')[0].classList.toggle('hidden');
         }
-        // function itemfn(ele,i){
+        function itemfn(ele,i){
             
-        //     var demolist=document.getElementsByClassName('coint')[i];
-        //     demolist.classList.remove('hidden');
+            var demolist=document.getElementsByClassName('coint')[i];
+            demolist.classList.remove('hidden');
+            document.getElementsByClassName('motion')[i].classList.add('bg-gray-200');
             
-        // }
-        // function item(ele,i){
             
-        //     var demolist=document.getElementsByClassName('coint')[i];
-        //     demolist.classList.add('hidden');
+        }
+        function item(ele,i){
+            
+            var demolist=document.getElementsByClassName('coint')[i];
+            demolist.classList.add('hidden');
+            demolist.classList.remove('flex');
+            document.getElementsByClassName('motion')[i].classList.remove('bg-gray-200');
 
-        // }
+        }
+       
+        
+        function ntg(ele){
+            ele.classList.remove('hidden');
+            document.getElementsByClassName('motion')[i].classList.add('bg-gray-200');
+        }
     </script>
 </body>
 </html>
