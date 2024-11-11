@@ -120,10 +120,53 @@
                 transform:translateX(15px);
             }    
         }
+        .madhu{
+           animation-name:moving;
+           animation-duration:0.6s;
+           animation-timing-function:ease-out;
+           animation-delay:0s;
+           animation-iteration-count:1;
+           animation-fill-mode:none;
+           transform:translateX(-20px);
+        }
+        @keyframes moving{
+            0%{
+               transform:translateX(15px);
+
+            }
+            100%{
+                transform:translateX(-20px);
+            }    
+        }
+        .madhu:hover{
+          transform: scale(1.05);
+          transition-duration: 0.3s;
+        }
+        .leftarw{
+           animation-name:swing;
+           animation-duration:2.2s;
+           animation-timing-function:ease;
+           animation-delay:0s;
+           animation-iteration-count:infinite;
+           animation-fill-mode:none;
+           
+        }
+        @keyframes swing{
+            0%{
+               transform:translateX(0px);
+
+            }
+            50%{
+                transform:translateX(40px);
+            } 
+            100%{
+                transform:translateX(0px);
+            }    
+        }
     </style>
 </head>
 <body class=" w-screen relative h-screen bg-black ">
-    <div class="header fixed  flex  flex-row  gap-8 px-8 pt-0 bg-black w-full text-white items-center">
+    <div class="header fixed h-[100px] z-10 flex  flex-row  gap-8 px-8 pt-0 bg-black w-full text-white items-center">
         <div class="flex flex-row items-center">
             <div class="w-[100px] h-[100px] sm:w-[8vw] sm:h-[20vh]"><img src="filmymojilogo.png" class="w-full h-full"></div>
             <div class="font-bold  p-2 text-[5vw] sm:text-[29px]">Filmymoji</div>
@@ -617,9 +660,32 @@
             <div class="flex flex-row justify-center items-center cursor-pointer font-bold h-full">Contact Us</div>
          </div>
         </div>
-        
-        
+    </div>
+    <div class="flex flex-row justify-between p-20">
+      <div class="flex flex-col w-[500px] mt-6 ml-10 text-white">
+          <div class="text-[65px] font-bold ">A creative design studio</div>
+          <div class="text-[20px] font-400">We're a creative design studio specializing in meeting the needs of the new generation. We offer innovative and cutting-edge design solutions to help our clients stand out in today's fast-paced.</div>
+          <div class="flex flex-row gap-2 items-center mt-10">
+            <img class="w-[40px] h-[40px] rounded-[50px]" src="madhu.png">
+            <img class="w-[40px] h-[40px] rounded-[50px]" src="1a_master.jpg">
+            <img class="w-[40px] h-[40px] rounded-[50px]" src="narayana.jpeg">
 
+            Believed by more than a thousand people
+           
+          </div> 
+          <div class="relative m-20">
+            <div>
+              <button class="absolute h-[40px]  w-[300px] bg-lime-200 rounded-[60px]"></button>
+              <button class="relative bottom-[20px] border border-black border-2 py-[9px] w-[300px] bg-lime-300 text-black text-[19px] rounded-[60px]"><div class="flex flex-row justify-between px-4"><div>Book a free Consultation</div><div class="flex justify-center items-center w-[35px] h-[35px] rounded-[50%] bg-black text-white"><i class="bi bi-telephone-fill"></i></div></div></button>
+          </div>
+          <div class="leftarw absolute right-[-220px] bottom-[-120px]">
+            <img class="w-[380px]" src="image-removebg-preview.png">
+          </div>
+        </div> 
+      </div>
+      <div class=" madhu border border-white border-4 mt-6 mr-10 rounded-[20px] w-[350px] h-[400px]">
+        <img class="w-full h-full rounded-[20px]" src="filmywallpaper.jpeg">
+      </div>
     </div>
     <script>
         function demo(){
