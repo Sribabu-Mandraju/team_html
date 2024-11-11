@@ -17,18 +17,21 @@
         }
     </script>
 </head>
-<body class="bg-gray-50 flex justify-center items-center min-h-screen">
+<body class=" flex justify-center items-center min-h-screen">
 
     <div class="relative group"> <!-- Group for hover control -->
         <div class="flex flex-row gap-2 p-2 rounded-lg cursor-pointer hover:bg-gray-200 items-center">
             Blog
             <div class="down w-fit"><i class="arrow bi bi-chevron-down"></i></div>
         </div>
-        <div class="coint flex border hidden group-hover:flex rounded-lg border-gray-200 bg-white flex-col absolute w-max p-2 z-10">
-            <div class="flex flex-col gap-1">
-                <div class="item cursor-pointer hover:bg-gray-200 p-2 rounded">Blog</div>
-                <div class="item cursor-pointer hover:bg-gray-200 p-2 rounded">Blog Grid</div>
-                <div class="item cursor-pointer hover:bg-gray-200 p-2 rounded">Blog Details</div>
+        <div class="coint flex left-[-20px] top-[23px]  hidden group-hover:flex bg-transparent rounded-lg bg-transparent flex-col absolute w-max p-2 z-10">
+            <div class="flex flex-col   gap-1 ">
+                <div class="box flex flex-col gap-2 h-[200px] w-[200px] rounded-md shadow-lg bg-zinc-200  mt-[30px]  relative group">
+                    <div class="top h-[30px] w-[30px] border-l bg-zinc-200 border-t z-[1] absolute rotate-[45deg] left-[30px] top-[-16px]"></div>
+                    <div class="w-[95%] mx-auto h-[40px] z-[2] font-semibold text-zinc-400 hover:text-black cursor-pointer mt-2 rounded-md duration-250 p-2 hover:bg-white">Hello</div>
+                    <div class="w-[95%] mx-auto h-[40px] z-[2] font-semibold text-zinc-400 hover:text-black cursor-pointer mt-2 rounded-md duration-250 p-2 hover:bg-white">One</div>
+                    <div class="w-[95%] mx-auto h-[40px] z-[2] font-semibold text-zinc-400 hover:text-black cursor-pointer mt-2 rounded-md duration-250 p-2 hover:bg-white">Two</div>
+                </div>
             </div>
         </div>
     </div>
