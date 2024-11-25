@@ -333,6 +333,28 @@
             transform:translateY(0);
           }
         }
+        .btn {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #44be26;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #dad0d0;
+        }
+
+        .btn:hover {background-color: #23aa27}
+
+        .btn:active {
+            background-color: #23aa27;
+            box-shadow: 0 5px #807f7f;
+            transform: translateY(4px);
+        }
     </style>
 </head>
 <body class=" w-screen h-screen relative overflow-x-hidden  font-serif">
@@ -587,9 +609,9 @@
              </div>
             </div>
             
-            <div>
-                <button class="inbtn absolute h-[40px]  w-[140px] bg-lime-100 rounded-[60px]"></button>
-                <button class="btn relative bottom-[14px] border border-black border-2 py-[9px] w-[140px] bg-lime-300 text-black text-[19px] rounded-[60px]" onmouseover="disable(0)" onmouseout="disable2(0)">Contact Us</button>
+            <div class=" flex justify-center items-center">
+              <button class="btn  h-auto font-bold  border border-black border-2  w-max  text-black text-[15px] md:text-[19px] rounded-[60px]">Contact us</button>
+
             </div>
 
         </div>
@@ -841,20 +863,19 @@
             <img class="w-[55px] h-[55px] rounded-[50px] absolute left-[40px] border border-black border-4" src="1a_master.jpg">
             <img class="w-[55px] h-[55px] rounded-[50px] absolute left-[82px] border border-black border-4" src="narayana.jpeg">
           </div>
-          <div class="text-[15px] md:text-[20px] md:ml-20">Believed by more than a thousand people</div>
+          <div class="reveal text-[15px] md:text-[20px] md:ml-20">Believed by more than a thousand people</div>
            
       </div> 
           <div class="relative mt-10 ml-8 md:ml-0  md:mt-20">
-            <div class="w-full h-full text-center">
-              <button class="inbtn absolute h-[40px]  w-[60vw] bg-lime-200 rounded-[60px] md:w-[300px] md:h-[40px]"></button>
-              <button class="btn relative bottom-[10px] md:bottom-[20px] border border-black border-2 py-[9px] w-[60vw] md:w-[300px] bg-lime-300 text-black text-[15px] md:text-[19px] rounded-[60px]"  onmouseover="disable(1)" onmouseout="disable2(1)"><div class="flex flex-row justify-between px-4"><div>Book a free Consultation</div><div class="flex justify-center items-center w-[25px] h-[25px] md:w-[35px] md:h-[35px] rounded-[50%] bg-black text-white"><i class="bi bi-telephone-fill text-[12px] md:text-[17px]"></i></div></div></button>
-          </div>
-          <div class="leftarw absolute hidden md:block right-[-280px] bottom-[-120px]">
+            <div class="reveal w-full  text-center">
+              <button class="btn relative bottom-[10px] font-bold md:bottom-[20px] border border-black border-2  w-max  text-black text-[15px] md:text-[19px] rounded-[60px]"><div class="flex flex-row justify-between gap-2 "><div>Book a free Consultation</div><div class="flex justify-center items-center w-[25px] h-[25px] md:w-[30px] md:h-[30px] rounded-[50%] bg-black text-white"><i class="bi bi-telephone-fill text-[12px] md:text-[17px]"></i></div></div></button>
+            </div>
+          <div class="leftarw absolute hidden md:block right-[-320px] bottom-[-120px]">
             <img class="w-[380px] " src="image-removebg-preview.png">
           </div>
         </div> 
       </div>
-      <div class="madhu2 flex mb-20 flex-row  w-full h-[40vh] md:h-auto md:w-[35vw] md:mt-[160px]  justify-center items-center">
+      <div class="madhu2 reveal flex mb-20 flex-row  w-full h-[40vh] md:h-auto md:w-[35vw] md:mt-[160px]  justify-center items-center">
         <div class=" w-3/4 mx-auto  h-full border border-white border-4 rounded-[20px] overflow-hidden">
         <img class="madhu mx-auto  w-full h-full  rounded-[20px]" src="filmywallpaper.jpeg">
       </div>
@@ -911,22 +932,21 @@
       <div class="w-[77vw] p-2 text-[17px] text-center md:text-left  md:w-[30vw]">We work closely with our clients to know their objectives, target audience, unique needs, and practical design solutions.</div>
       <div class="relative reveal">
         <div class="absolute flex w-full h-full  items-center justify-center">
-          <button class="inbtn absolute h-[33px] md:w-[140px]  w-[100px] bg-lime-200 rounded-[60px]"></button>
-          <button class="btn relative bottom-[13px] border border-black border-2 py-[9px] md:w-[140px] w-[100px] bg-lime-400 text-black text-[19px] rounded-[60px]" onmouseover="disable(2)" onmouseout="disable2(2)">Play<i class="bi bi-play-circle-fill pl-4 md:text-[20px]"></i></button>
+          <button class="btn flex flex-row   h-auto font-bold  border border-black border-2  w-max  text-black text-[15px] md:text-[19px] rounded-[60px]"><span>Play</span><span><i class="bi bi-play-circle-fill pl-4 md:text-[20px]"></i></span></button>
         </div>
         <img class="border border-black border-[6px] w-[77vw] md:w-[50vw] rounded-[30px]" src="https://i.ytimg.com/vi/_QI5_8C3jlg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDlB2Fpd7xBLuwcfH28q4EjExctxA">
       </div>
-      <div class="client md:w-[23vw] w-[77vw] bg-black m-2 p-6 rounded-[30px]">
+      <div class="client counter-container md:w-[23vw] w-[77vw] bg-black m-2 p-6 rounded-[30px]" id="counterContainer">
         <div class="text-center p-1">
-          <div class="text-[50px] mb-2 text-bold">15+</div>
+          <div class="text-[50px] mb-2 text-bold"><span class="counter"  data-target="15">0</span>+</div>
           <div class="text-white font-bold text-[17px]">Years of experience</div>
         </div><hr class="hz">
         <div class="text-center p-1">
-          <div class="text-[50px] mb-2 text-bold">120k</div>
+          <div class=" text-[50px] mb-2 text-bold" ><span class="counter" data-target="120">0</span>k</div>
           <div class="text-white font-bold text-[17px]">Succesful Projects</div>
         </div><hr class="hz">
         <div class="text-center p-1">
-          <div class="text-[50px] mb-2 text-bold">100%</div>
+          <div class="text-[50px] mb-2 text-bold" ><span class="counter" data-target="100">0</span>%</div>
           <div class="text-white font-bold text-[17px]">Client Satisfaction rate</div>
         </div>
       </div>
@@ -1143,7 +1163,7 @@
           <i class="bi bi-linkedin mx-1 hover:text-lime-300"></i>
           
         </div>
-        <div class="leftarw absolute hidden md:block bottom-[-70px] right-[0px]">
+        <div class="leftarw absolute hidden md:block bottom-[-100px] right-[0px]">
           <img class="w-[400px] " src="image-removebg-preview.png">
         </div>
 
@@ -1157,8 +1177,7 @@
           <textarea  rows="5" cols="10" placeholder="Write your message here..." class="w-full border border-gray-200 bg-black rounded-[20px] p-4 my-4"></textarea>
         </form>
         <div class="w-full  text-center my-4  ">
-          <button class="inbtn absolute h-[40px]  md:w-[35vw] w-[80vw] bg-lime-200 rounded-[60px]  h-[40px]"></button>
-          <button class="btn relative  bottom-[20px] border border-black border-2 py-[9px] w-full bg-lime-300 text-black text-[22px] rounded-[60px]"  onmouseover="disable(3)" onmouseout="disable2(3)"><div class="flex flex-row justify-between px-4 text-bold"><div>Send message</div><div class="flex justify-center items-center w-[25px] h-[25px] md:w-[35px] md:h-[35px] rounded-[50%] bg-black text-white"><i class="bi bi-arrow-right text-bold text-[12px] md:text-[17px]"></i></div></div></button>
+          <button class="btn flex flex-row   h-auto font-bold  border border-black border-2  w-full  text-black text-[15px] md:text-[19px] rounded-[60px]"><div class="flex flex-row w-full justify-between px-4 text-bold"><div>Send message</div><div class="flex justify-center items-center w-[25px] h-[25px] md:w-[35px] md:h-[35px] rounded-[50%] bg-black text-white"><i class="bi bi-arrow-right text-bold text-[12px] md:text-[17px]"></i></div></div></button>
       </div>
 
       </div>
@@ -1181,6 +1200,7 @@
       var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
         grabCursor: true,
+        loop:true,
         centeredSlides: true,
         slidesPerView: "auto",
         coverflowEffect: {
@@ -1273,12 +1293,35 @@
         function remove(){
           document.getElementsByClassName('sidebar')[0].classList.add('hidden');
         }
-        function disable(i){
-            document.getElementsByClassName('inbtn')[i].classList.add('hidden');
+        const counterContainer = document.getElementById("counterContainer");
+        const counters = document.querySelectorAll(".counter");
+        let hasStarted = false; // Ensure all counters start only once
+
+        function startIncrementAll() {
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute("data-target"), 10);
+                let current = 0;
+                const stepTime = Math.abs(Math.floor(1000 / target)); // 2 seconds duration
+                const interval = setInterval(() => {
+                    current++;
+                    counter.textContent = current;
+                    if (current >= target) {
+                        clearInterval(interval);
+                    }
+                }, stepTime);
+            });
         }
-        function disable2(i){
-            document.getElementsByClassName('inbtn')[i].classList.remove('hidden');
+
+        function checkVisibility() {
+            const rect = counterContainer.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0 && !hasStarted) {
+                hasStarted = true; // Start incrementing once
+                startIncrementAll();
+            }
         }
+
+        window.addEventListener("scroll", checkVisibility);
+        window.addEventListener("load", checkVisibility);
         
     </script>
 </body>
