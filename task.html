@@ -79,7 +79,6 @@
         @keyframes effect{
             0%{
                transform:scale(0);
-
             }
             50%{
                 transform:scale(0.5);
@@ -179,16 +178,7 @@
                 transform:translateX(0px);
             }    
         }
-        /* .reveal{
-          position:relative;
-          transform :translateY(150px);
-          opacity:0;
-          transition: all 2s ease;
-        }
-        .reveal.active{
-          transform:translateY(0px);
-          opacity: 1;
-        } */
+        
         .borderani:hover{
           background-color: rgba(133, 247, 67, 0.938);
           border-right:6px solid black;
@@ -230,9 +220,7 @@
         }
         
         .swiper-slide img:hover{
-            /* transform:scale(1.05);
-            transition-delay: 0.2s; */
-            animation-name:motion2;
+           animation-name:motion2;
            animation-duration:0.5s;
            animation-timing-function:ease-in;
            animation-delay:0s;
@@ -246,13 +234,10 @@
 
             }
             to{
-              transform:scale(1.05);/*go back to original position*/
+              transform:scale(1.05);
             }
         }
-        
 
-    
-    
     .newclass{
       background-color: rgba(133, 247, 67, 0.938);
       border-left:10px;
@@ -300,23 +285,24 @@
               transform: translateY(-30px);
             }   
         }
-        input {
+        input{
             width: 100%;
             
             padding: 10px;
             margin: 20px 0;
-            border: 2px solid gray; /* Default border color */
+            border: 2px solid gray; 
             background-color: black;
             color: white;
             border-radius: 10px;
             font-size: 16px;
         }
         
-        /* Change border color on focus */
-        input:focus {
+   
+        input:focus{
             outline: none;
-            border-color: limegreen; /* New border color on focus */
+            border-color: limegreen; 
         }
+        
         .reveal{
           animation:revealonscroll ease-in-out both;
           animation-timeline:view();
@@ -629,7 +615,7 @@
         <div class="flex flex-col gap-2 ">
         <div class="flex flex-col w-full">
           <div class="motion">
-            <div class="">
+            <div >
                 <div class="flex text-[20px] flex-row justify-between font-bold p-2" onclick="side(0)">
                     <div class="">Demo&nbsp;&nbsp;</div>
                     <div class="  w-fit"><i class="sidedown bi bi-chevron-down font-bold"></i></div> 
@@ -847,7 +833,7 @@
           </div>
 
 
-          <!-- </div> -->
+          
           <div>
             <div class="flex flex-row justify-center items-center cursor-pointer font-bold h-full">Contact Us</div>
          </div>
@@ -858,7 +844,7 @@
           <div class="reveal  text-[50px] text-center md:text-left font-bold md:text-[65px]">A creative design studio</div>
           <div class="reveal  text-[15px] text-center md:text-left md:text-[20px] font-400 mt-4">We're a creative design studio specializing in meeting the needs of the new generation. We offer innovative and cutting-edge design solutions to help our clients stand out in today's fast-paced.</div>
           <div class="reveal flex  flex-col md:flex-row gap-2 items-center mt-10">
-            <div class="flex relative ml-[-70px] md:ml-0 w-max h-max flex-row ">
+            <div class="reveal flex relative ml-[-70px] md:ml-0 w-max h-max flex-row ">
             <img class="w-[55px] h-[55px] rounded-[50px]  border border-black border-4" src="madhu.png">
             <img class="w-[55px] h-[55px] rounded-[50px] absolute left-[40px] border border-black border-4" src="1a_master.jpg">
             <img class="w-[55px] h-[55px] rounded-[50px] absolute left-[82px] border border-black border-4" src="narayana.jpeg">
@@ -988,7 +974,7 @@
     </div>
     <div class="flex flex-wrap gap-24 w-full items-center py-[10vh] justify-center ">
       <div class="flex flex-col gap-10 w-[80vw] md:w-[50vw] ">
-        <div class=" text-center md:text-left  font-bold text-[23px] md:text-[65px]">Our high-quality        <span class="asterisk m-2 text-bold  hidden md:inline"><i class="bi bi-asterisk"></i></span>
+        <div class=" text-center md:text-left  font-bold text-[23px] md:text-[65px]">Our high-quality <span class="asterisk m-2 text-bold  hidden md:inline"><i class="bi bi-asterisk"></i></span>
           working processes</div>
         <div class="text-[15px] md:text-[20px]">We focus at every stage on effective communication and collaboration between the client and ensuring that the final design meets the client s objectives and expectations.</div>
         <div class="text-[15px] md:text-[20px]">It is important to note that these are simplified steps, and the actual work process may vary depending on the complexity of the project.</div>
@@ -1170,15 +1156,23 @@
       </div>
       <div class="md:w-[35vw] w-[80vw] text-white pt-[10px]">
         <div class="text-[25px] my-4 font-bold"> Send Us a message</div>
-        <form>
-          <input type="text" placeholder="Your Name" class="w-full border border-gray-200 bg-black rounded-[20px] p-4 my-4" >
-          <input type="email" placeholder="Your email address" class="w-full border border-gray-200 bg-black rounded-[20px] p-4 my-4">
-          <input type="phone" placeholder="+088-234-6849" class="w-full border border-gray-200 bg-black rounded-[20px] p-4 my-4">
-          <textarea  rows="5" cols="10" placeholder="Write your message here..." class="w-full border border-gray-200 bg-black rounded-[20px] p-4 my-4"></textarea>
+        <form >
+          <input type="text" name="name" maxlength="30" placeholder="Your Name" id="name" class="w-full border border-gray-200 bg-black rounded-[20px] p-4 my-4" >
+          <input type="email" name="email" placeholder="Your email address" id="email" class="w-full border border-gray-200 bg-black rounded-[20px] p-4 my-4">
+          <input type="phone" name="num" placeholder="+088-234-6849" id="num" class="w-full border border-gray-200 bg-black rounded-[20px] p-4 my-4">
+          <textarea  rows="5" cols="10" placeholder="Write your message here..." id="text" class="w-full border border-gray-200 bg-black rounded-[20px] p-4 my-4 "></textarea>
+          
+          <button type="button" class="btn  flex flex-row w-full  justify-between text-center my-4  h-auto font-bold  border border-black border-2  w-full  text-black text-[15px] md:text-[19px] rounded-[60px]" onclick="babu()">
+              
+                <div>Send message</div>
+                <div class="flex justify-center items-center w-[25px] h-[25px] md:w-[35px] md:h-[35px] rounded-[50%] bg-black text-white">
+                  <i class="bi bi-arrow-right text-bold text-[12px] md:text-[17px]"></i>
+                </div>
+              
+              </button>
+          
         </form>
-        <div class="w-full  text-center my-4  ">
-          <button class="btn flex flex-row   h-auto font-bold  border border-black border-2  w-full  text-black text-[15px] md:text-[19px] rounded-[60px]"><div class="flex flex-row w-full justify-between px-4 text-bold"><div>Send message</div><div class="flex justify-center items-center w-[25px] h-[25px] md:w-[35px] md:h-[35px] rounded-[50%] bg-black text-white"><i class="bi bi-arrow-right text-bold text-[12px] md:text-[17px]"></i></div></div></button>
-      </div>
+        
 
       </div>
       <hr class="w-full h-[1px] bg-gray-300 bg-opacity-0.3">
@@ -1215,23 +1209,36 @@
         },
       });
     </script>
-      <script>
-    
-        // window.addEventListener('scroll',reveal);
-        // function reveal(){
-        //   var reveals=document.querySelectorAll('.reveal');
-        //   for(var i=0;i<reveals.length;i++){
-        //     var windowheight=window.innerHeight;
-        //     var revealtop=reaveals[i].getBoundingClientReact().top;
-        //     var revealpoint=150;
-        //     if(revealtop<windowheight-revealpoint){
-        //       reveals[i].classList.add('active');
-        //     }
-        //     else{
-        //       reveals[i].classList.remove('active');
-        //     }
-        //   }
-        // }
+     <script>
+       function babu(){
+           
+           const name=document.getElementById('name').value;
+           const email= document.getElementById('email').value;
+           const num=document.getElementById('num').value;
+           const text=document.getElementById('text').value;
+           const namreg=/^[A-Za-z\s'-]+$/;
+           const emreg=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+           const numeg=/^\d{10}$/;
+           if(!name||!email||!num||!text){
+            alert("fill all the details");
+           }
+           else if(!namreg.test(name)){
+            alert("Name should be in alphabets.");
+            
+           }
+           else if(!emreg.test(email)){
+            alert("email should be in a correct way");
+
+           }
+           else if(!numeg.test(num)){
+            alert("phone number contains digits only");
+           }
+           else{
+            alert("submitted successfully");
+           }
+        }
+        
+      
         function moving(i){
           var moves=document.getElementsByClassName('move1');
           moves[i].classList.add('move2');
@@ -1243,27 +1250,17 @@
           movesout[i].classList.add('hidden');
         }
         function steps(i){
+          
           var steps=document.getElementsByClassName('step');
           var show=document.getElementsByClassName('show');
           var down=document.getElementsByClassName('downarw');
-          // for(var j=0;i<steps.length;i++){
-          //   if(j==i){
-              steps[i].classList.toggle('newclass');
-              down[i].classList.toggle('bi-chevron-down');
-              down[i].classList.toggle('bi-chevron-up');
-              show[i].classList.toggle('hidden');
-              show[i].classList.toggle('flex');
-            }
-          //   else{
-          //     steps[i].classList.remove('newclass');
-          //     down[i].classList.add('bi-chevron-down');
-              
-          //     show[i].classList.add('hidden');
-              
-
-          //   }
-          // }
-        // }
+          steps[i].classList.toggle('newclass');
+          down[i].classList.toggle('bi-chevron-down');
+          down[i].classList.toggle('bi-chevron-up');
+          show[i].classList.toggle('hidden');
+          show[i].classList.toggle('flex');
+        }
+          
         function demo(){
             var demolist=document.getElementsByClassName('demolist')[0];
             demolist.classList.remove('hidden');
